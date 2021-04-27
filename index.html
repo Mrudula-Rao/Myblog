@@ -1,48 +1,57 @@
+ 
 <html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<head>
-    <title>Sir Tim Berners-Lee</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
 
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
 
+  <body>
+  <div class="container">
+    
+    <center>
+      <h3 class="btn btn-default heading">IMAGE RECOGNITION</h3>
+      <br><br>
 
-</head>
+      <p style="font-size: 22px;">Model is trained to identify the following objects: </p>
 
-<body>
+      <b class="name_of_objects">
+        phone
+        <hr>
+        watch
+        <hr>
+        water bottle
+        <hr>
+        comb
+        <hr>
+      </b>
 
-    <ul class="menu">
-        <li class="links">Home</li>
-        <li class="links">My Videos</li>
-        <li class="links">Work</li>
-        <li class="links">Writings</li>
-        <li class="links">Contact</li>
+      <label>Webcam View - </label>
+      <div id="camera"></div>
+      <br><br>
+      <div id="result"></div>
+      <br><br>
+      <button onclick="take_snapshot()" class="btn btn-info">Capture Image</button>
+      <br><br>
+      <button onclick="check()" class="btn btn-success">Identify Image</button>
+      <br><br>
 
-    </ul>
+      <p style="font-size: 22px;">Object : <span id="result_object_name"></span> </p>
+      <p style="font-size: 22px;">Accuracy : <span id="result_object_accuracy"></span> </p>
+    </center>
 
-    <section id="welcome">
-        <div class="parallax-inner">
-            <img src="stbl.jpg" class="profile" />
-            <h1>I Am <br><span id="name">Tim Berners-Lee</span></h1>
-            <h2> I am the founder of www: World Wide Web</h2>
-        </div>
+  </div>
+<script src="main.js"></script>
 
-    </section>
+  </body>
+</html>
 
-
-
-    <section id="bio">
-        <h1>Hi!</h1>
-        <div class="line"></div>
-        <p>Tim Berners-Lee is a software engineer who invented the Internet (or the World Wide Web) in 1989 while at CERN, the European Particle Physics Laboratory.
-
-            He is director of the World Wide Web Consortium that he founded and a Professor in the Computer Science Department at the University of Oxford.
-
-            In 2001 he became a Fellow of the Royal Society and in 2004 he was knighted.<br><br>In 1994 Berners-Lee founded the World Wide Web Consortium (W3C) at the Laboratory of Computer Science (LCS) at the Massachusetts Institute of Technology in Boston. It was made up of companies that wanted to work together to create Web standards and also improve the Web. It was quickly agreed that the technology should be free of royalties and patents. Berners-Lee has served as director of this W3C since it was founded.
-
-            In 1995 Microsoft produced the first version of Internet Explorer and this commercial browser created enormous growth in websites and web users.
-
-            The Web was first used for e-commerce in 1997.</p>
-    </section>
-
-</body></html>
+ 
